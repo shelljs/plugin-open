@@ -1,0 +1,34 @@
+{
+  "name": "shelljs-plugin-open",
+  "version": "0.1.0",
+  "description": "An example shelljs-plugin to open a file with its default application",
+  "main": "index.js",
+  "scripts": {
+    "posttest": "npm run lint",
+    "test": "mocha",
+    "lint": "eslint .",
+    "changelog": "shelljs-changelog",
+    "release:major": "shelljs-release major",
+    "release:minor": "shelljs-release minor",
+    "release:patch": "shelljs-release patch"
+  },
+  "keywords": [
+    "shelljs",
+    "plugin",
+    "open"
+  ],
+  "author": "Nate Fischer <ntfschr@gmail.com> (https://github.com/nfischer)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.1.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "mocha": "^2.5.3",
+    "shelljs": "0.7.1",
+    "shelljs-changelog": "^0.2.2",
+    "shelljs-release": "^0.2.0",
+    "should": "^10.0.0"
+  },
+  "peerDependencies": {
+    "shelljs": "0.7.1"
+  }
+}
