@@ -1,6 +1,17 @@
-/* globals describe, it, before, afterEach */
+/* globals describe, it */
+
+// Steps for using a plugin:
+// First, you must load in ShellJS:
 var shell = require('shelljs');
-var pluginOpen = require('..'); // load plugin
+// After that, you can load the plugin:
+var pluginOpen = require('..');
+/*
+ * You can load a plugin with either of the following syntaxes:
+ * `require('shelljs-plugin-open');` or
+ * `var pluginOpen = require('shelljs-plugin-open');`
+*/
+
+// Now, require whichever other modules you want to require:
 require('should');
 
 // override console.error() to cover up common.error() calls

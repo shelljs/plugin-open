@@ -58,3 +58,10 @@ shell.open('file.txt'); // the plugin is now available!
  - Windows
 
 This is only supported for Node v4+
+
+## Writing plugins
+
+If you're interested in taking a look at the current state of the plugin API,
+take a look at [index.js](index.js). This has helpful comments explaining the
+necessary boilerplate for writing a plugin. For an example usage of the plugin,
+take a look at [test/test.js](test/test.js).

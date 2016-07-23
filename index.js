@@ -1,19 +1,16 @@
+// This exposes the plugin utilities
 var plugin = require('shelljs/src/common');
+
+// Require whatever modules you need for your project
 var child = require('child_process');
 var shell = require('shelljs');
 var fs = require('fs');
 
-//@
-//@ ### open([options,] file [, file ...])
-//@ ### open([options,] file_array)
-//@ Examples:
-//@
-//@ ```javascript
-//@ open('file.jpg');
-//@ ```
-//@
-//@ Opens files with their default application
+// Implement your command in a function, which takes an options string as the
+// first parameter
 function open(options, fileName) {
+  // Use the plugin utils to parse the options to only those options that are
+  // available (in this case, there are no available options
   options = plugin.parseOptions(options, {
   });
 
@@ -36,6 +33,8 @@ function open(options, fileName) {
   return new shell.ShellString('', '', 0);
 }
 
+// Register the new plugin as a ShellJS command
 plugin.register('open', open, { globStart: 1 });
 
+// Optionally, you can export the implementation of the command like so:
 exports.open = open;
