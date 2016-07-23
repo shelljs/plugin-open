@@ -38,4 +38,11 @@ describe('plugin-open', function () {
     ret.stdout.should.equal('');
     ret.stderr.should.equal('');
   });
+
+  it('handles glob characters', function () {
+    var ret = shell.open('te?t/*st.js');
+    ret.code.should.equal(0);
+    ret.stdout.should.equal('');
+    ret.stderr.should.equal('');
+  });
 });
