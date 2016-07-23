@@ -22,11 +22,10 @@
     "type": "git",
     "url": "git://github.com/shelljs/plugin-open.git"
   },
-  "license": "BSD-3-Clause",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^3.1.1",
-    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-config-airbnb-base": "^4.0.2",
     "mocha": "^2.5.3",
     "shelljs": "0.7.1",
     "shelljs-changelog": "^0.2.2",

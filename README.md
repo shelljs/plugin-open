@@ -7,14 +7,19 @@ This is designed to imitate the `open` command on Mac OS X. Here's the
 equivalent commands for other systems:
 
  - Mac OS X
+
    ```bash
    $ open file.txt # opens in a text editor
    ```
+
  - Linux
+
    ```bash
    $ xdg-open file.txt # opens in a text editor
    ```
+
  - Windows
+
    ```
    > file.txt
    ```
