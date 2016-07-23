@@ -13,23 +13,25 @@ var fs = require('fs');
 //@ ```
 //@
 //@ Opens files with their default application
-function open(options, source) {
+function open(options, fileName) {
   options = plugin.parseOptions(options, {
   });
 
-  if (!fs.existsSync(source)) {
-    plugin.error('Unable to locate file: ' + source);
+  var URL_REGEX = /^https?:\/\/.*/;
+
+  if (!fs.existsSync(fileName) && !fileName.match(URL_REGEX)) {
+    plugin.error('Unable to locate file: ' + fileName);
   }
 
   if (process.platform.match(/^win/)) {
     // a shell call using only the filename
-    child.exec(source);
+    child.exec('start ' + fileName);
   } else if (process.platform.match(/^linux/)) {
     // xdg-open is fairly reliable
-    child.exec('xdg-open ' + JSON.stringify(source));
+    child.exec('xdg-open ' + JSON.stringify(fileName));
   } else {
     // assume it's Mac OS X, which uses `open()`
-    child.exec('open ' + JSON.stringify(source));
+    child.exec('open ' + JSON.stringify(fileName));
   }
   return new shell.ShellString('', '', 0);
 }

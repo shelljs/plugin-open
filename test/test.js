@@ -24,6 +24,12 @@ describe('plugin-open', function () {
     ret.stderr.should.equal('open: Unable to locate file: missingFile.txt');
   });
 
+  it('opens URLs', function () {
+    var ret = shell.open('https://www.google.com');
+    ret.code.should.equal(0);
+    ret.stderr.should.equal('');
+  });
+
   it('opens files asynchronously', function () {
     var ret = shell.open('test/');
 

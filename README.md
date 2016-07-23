@@ -3,7 +3,7 @@
 [![Travis](https://img.shields.io/travis/shelljs/plugin-open/master.svg?style=flat-square&label=unix)](https://travis-ci.org/shelljs/plugin-open)
 
 A [ShellJS](https://github.com/shelljs/shelljs) plugin for the `open()` command
-to open a file with its default application.
+to open a file (or URL) with its default application.
 
 This is designed to imitate the `open` command on Mac OS X. Here's the
 equivalent commands for other systems:
@@ -23,7 +23,7 @@ equivalent commands for other systems:
  - Windows
 
    ```
-   > file.txt
+   > start file.txt
    ```
 
 ## Installation
@@ -35,10 +35,11 @@ $ npm install --save github:shelljs/plugin-open
 
 ## Usage
 
-ShellJS unofficially supports plugins (the API is likely to change a bit) since
-v0.7.1. This plugin is a test of that API, and will adapt along with it. To use
-this plugin, you must use exactly version v0.7.1 (although, eventually this will
-support v1.0.0+).
+ShellJS unofficially has the capacity for plugins (the API is likely to change a
+bit) since v0.7.1. Although we *don't recommend* developing for this yet, this
+plugin is designed to test that API, and we will adapt it along with changes to
+ShellJS up until official plugin support. To use this plugin, you must use
+exactly version v0.7.1 (although, eventually this will support v1.0.0+).
 
 To use this plugin in your project, include it like so:
 
