@@ -18,6 +18,11 @@
     "open"
   ],
   "author": "Nate Fischer <ntfschr@gmail.com> (https://github.com/nfischer)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shelljs/plugin-open.git"
+  },
+  "license": "BSD-3-Clause",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^3.1.1",
