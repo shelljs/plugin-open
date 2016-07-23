@@ -1,5 +1,7 @@
 # shelljs-plugin-open
 
+[![Travis](https://img.shields.io/travis/shelljs/plugin-open/master.svg?style=flat-square&label=unix)](https://travis-ci.org/shelljs/plugin-open)
+
 A [ShellJS](https://github.com/shelljs/shelljs) plugin for the `open()` command
 to open a file with its default application.
 
