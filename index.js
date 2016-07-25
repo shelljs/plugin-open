@@ -3,17 +3,11 @@ var plugin = require('shelljs/src/common');
 
 // Require whatever modules you need for your project
 var child = require('child_process');
-var shell = require('shelljs');
 var fs = require('fs');
 
 // Implement your command in a function, which takes an options string as the
 // first parameter
 function open(options, fileName) {
-  // Use the plugin utils to parse the options to only those options that are
-  // available (in this case, there are no available options
-  options = plugin.parseOptions(options, {
-  });
-
   var URL_REGEX = /^https?:\/\/.*/;
 
   if (!fs.existsSync(fileName) && !fileName.match(URL_REGEX)) {
@@ -30,11 +24,15 @@ function open(options, fileName) {
     // assume it's Mac OS X, which uses `open()`
     child.exec('open ' + JSON.stringify(fileName));
   }
-  return new shell.ShellString('', '', 0);
+  return '';
 }
 
 // Register the new plugin as a ShellJS command
-plugin.register('open', open, { globStart: 1 });
+plugin.register('open', open, {
+  globStart: 1,     // Start globbing at the first non-option argument
+  cmdOptions: {},   // No supported options
+  wrapOutput: true, // Wrap the output in a ShellString
+});
 
 // Optionally, you can export the implementation of the command like so:
 exports.open = open;
