@@ -14,16 +14,15 @@ function open(options, fileName) {
     plugin.error('Unable to locate file: ' + fileName);
   }
 
-  if (process.platform.match(/^win/)) {
-    // a shell call using only the filename
-    child.exec('start ' + fileName);
-  } else if (process.platform.match(/^linux/)) {
-    // xdg-open is fairly reliable
-    child.exec('xdg-open ' + JSON.stringify(fileName));
-  } else {
-    // assume it's Mac OS X, which uses `open()`
-    child.exec('open ' + JSON.stringify(fileName));
-  }
+  var cmd;
+  if (process.platform.match(/^win/))
+    cmd = 'start';
+  else if (process.platform.match(/^linux/))
+    cmd = 'xdg-open';
+  else // assume it's Mac OS X, which uses `open`
+    cmd = 'open';
+
+  child.exec(cmd + ' ' + JSON.stringify(fileName));
   return '';
 }
 

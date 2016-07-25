@@ -75,17 +75,35 @@ describe('plugin-open', function () {
     (typeof pluginOpen.open).should.equal('function');
   });
 
+  it('does not accept options/flags', function () {
+    /*
+     * Plugins are an easy way of specifying what options/flags your command
+     * supports
+     */
+    var ret = shell.open('-f', 'test');
+    ret.code.should.equal(1);
+    ret.stdout.should.equal('');
+    var errorMsg = 'open: option not recognized: f';
+    ret.stderr.should.equal(errorMsg);
+    // TODO(nate): refactor ShellJS to support this
+    // shell.error().should.equal(errorMsg);
+  });
+
   it('cannot open files that are missing', function () {
     var ret = shell.open('missingFile.txt');
     ret.code.should.equal(1);
     ret.stdout.should.equal('');
-    ret.stderr.should.equal('open: Unable to locate file: missingFile.txt');
+    var errorMsg = 'open: Unable to locate file: missingFile.txt';
+    ret.stderr.should.equal(errorMsg);
+    // TODO(nate): refactor ShellJS to support this
+    // shell.error().should.equal(errorMsg);
   });
 
   it('opens URLs', function () {
     var ret = shell.open('https://www.google.com');
     ret.code.should.equal(0);
     assert.ok(!ret.stderr);
+    assert.ok(!shell.error());
   });
 
   it('opens files asynchronously', function () {
@@ -95,6 +113,7 @@ describe('plugin-open', function () {
     ret.code.should.equal(0);
     ret.stdout.should.equal('');
     assert.ok(!ret.stderr);
+    assert.ok(!shell.error());
   });
 
   it('handles glob characters', function () {
@@ -106,5 +125,6 @@ describe('plugin-open', function () {
     ret.code.should.equal(0);
     ret.stdout.should.equal('');
     assert.ok(!ret.stderr);
+    assert.ok(!shell.error());
   });
 });
