@@ -37,6 +37,6 @@
     "should": "^10.0.0"
   },
   "peerDependencies": {
-    "shelljs": "0.7.2"
+    "shelljs": "github:shelljs/shelljs"
   }
 }
