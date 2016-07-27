@@ -44,14 +44,14 @@ describe('plugin-open', function () {
      * Plugins automatically add new commands to the ShellJS instance, such as
      * shell.open()
      */
-    (typeof shell.open).should.equal('function');
+    shell.open.should.be.type('function');
   });
 
   it('gets added to the global namespace for shelljs/global', function () {
     /*
      * Plugins are also compatible with using require('shelljs/global');
      */
-    (typeof global.open).should.equal('function');
+    global.open.should.be.type('function');
     global.open.should.equal(shell.open);
   });
 
@@ -59,8 +59,8 @@ describe('plugin-open', function () {
     /*
      * Plugins shouldn't interfere with existing commands
      */
-    (typeof shell.cp).should.equal('function');
-    (typeof shell.mv).should.equal('function');
+    shell.cp.should.be.type('function');
+    shell.mv.should.be.type('function');
     shell.ls().should.have.property('toEnd');
     shell.ls().should.have.property('grep');
     shell.ls().should.have.property('sed');
@@ -70,9 +70,9 @@ describe('plugin-open', function () {
     /*
      * A plugin author can also export the implementation of their commands
      */
-    (typeof pluginOpen).should.equal('object');
+    pluginOpen.should.be.type('object');
     pluginOpen.should.have.property('open');
-    (typeof pluginOpen.open).should.equal('function');
+    pluginOpen.open.should.be.type('function');
   });
 
   it('does not accept options/flags', function () {

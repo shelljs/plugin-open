@@ -31,12 +31,12 @@
     "eslint-config-airbnb-base": "^4.0.2",
     "eslint-plugin-import": "^1.11.1",
     "mocha": "^2.5.3",
-    "shelljs": "github:shelljs/shelljs",
+    "shelljs": "^0.7.3",
     "shelljs-changelog": "^0.2.2",
     "shelljs-release": "^0.2.0",
     "should": "^10.0.0"
   },
   "peerDependencies": {
-    "shelljs": "github:shelljs/shelljs"
+    "shelljs": "^0.7.3"
   }
 }
