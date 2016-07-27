@@ -1,5 +1,5 @@
 // This exposes the plugin utilities
-var plugin = require('shelljs/src/common');
+var plugin = require('shelljs/plugin');
 
 // Require whatever modules you need for your project
 var child = require('child_process');

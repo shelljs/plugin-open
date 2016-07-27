@@ -1,4 +1,4 @@
-/* globals describe, it */
+/* globals describe, it, open */
 
 /*
  * Using ShellJS Plugins:
@@ -85,8 +85,7 @@ describe('plugin-open', function () {
     ret.stdout.should.equal('');
     var errorMsg = 'open: option not recognized: f';
     ret.stderr.should.equal(errorMsg);
-    // TODO(nate): refactor ShellJS to support this
-    // shell.error().should.equal(errorMsg);
+    shell.error().should.equal(errorMsg);
   });
 
   it('cannot open files that are missing', function () {
@@ -95,8 +94,12 @@ describe('plugin-open', function () {
     ret.stdout.should.equal('');
     var errorMsg = 'open: Unable to locate file: missingFile.txt';
     ret.stderr.should.equal(errorMsg);
-    // TODO(nate): refactor ShellJS to support this
-    // shell.error().should.equal(errorMsg);
+    shell.error().should.equal(errorMsg);
+    ret = open('missingFile.txt');
+    ret.code.should.equal(1);
+    ret.stdout.should.equal('');
+    ret.stderr.should.equal(errorMsg);
+    shell.error().should.equal(errorMsg);
   });
 
   it('opens URLs', function () {
