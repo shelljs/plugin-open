@@ -5,8 +5,8 @@ var plugin = require('shelljs/plugin');
 var child = require('child_process');
 var fs = require('fs');
 
-// Implement your command in a function, which takes an options string as the
-// first parameter
+// Implement your command in a function, which accepts `options` as the
+// first parameter, and other arguments after that
 function open(options, fileName) {
   var URL_REGEX = /^https?:\/\/.*/;
 
@@ -29,7 +29,7 @@ function open(options, fileName) {
 // Register the new plugin as a ShellJS command
 plugin.register('open', open, {
   globStart: 1,     // Start globbing at the first non-option argument
-  cmdOptions: {},   // No supported options
+  cmdOptions: {},   // There are no supported options for this command
   wrapOutput: true, // Wrap the output in a ShellString
 });
 
