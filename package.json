@@ -1,6 +1,6 @@
 {
   "name": "shelljs-plugin-open",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An example shelljs-plugin to open a file with its default application",
   "main": "index.js",
   "scripts": {
