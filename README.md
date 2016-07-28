@@ -2,6 +2,7 @@
 
 [![Travis](https://img.shields.io/travis/shelljs/plugin-open/master.svg?style=flat-square&label=unix)](https://travis-ci.org/shelljs/plugin-open)
 [![AppVeyor](https://img.shields.io/appveyor/ci/shelljs/plugin-open/master.svg?style=flat-square&label=windows)](https://ci.appveyor.com/project/shelljs/plugin-open/branch/master)
+[![npm](https://img.shields.io/npm/v/shelljs-plugin-open.svg?style=flat-square)](https://www.npmjs.com/package/shelljs-plugin-open)
 
 A [ShellJS](https://github.com/shelljs/shelljs) plugin for the `open()` command
 to open a file (or URL) with its default application.
