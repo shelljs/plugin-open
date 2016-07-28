@@ -30,8 +30,8 @@ equivalent commands for other systems:
 ## Installation
 
 ```bash
-$ npm install --save --save-exact shelljs@0.7.1 # currently requires exactly this ShellJS version
-$ npm install --save github:shelljs/plugin-open
+$ npm install --save shelljs
+$ npm install --save shelljs-plugin-open
 ```
 
 ## Usage
