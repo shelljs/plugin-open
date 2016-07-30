@@ -5,7 +5,8 @@
 [![npm](https://img.shields.io/npm/v/shelljs-plugin-open.svg?style=flat-square)](https://www.npmjs.com/package/shelljs-plugin-open)
 
 A [ShellJS](https://github.com/shelljs/shelljs) plugin for the `open()` command
-to open a file (or URL) with its default application.
+to open a file (or URL) with its default application. This is largely based on
+[opener](https://github.com/domenic/opener).
 
 This is designed to imitate the `open` command on Mac OS X. Here's the
 equivalent commands for other systems:
