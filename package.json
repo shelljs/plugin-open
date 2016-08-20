@@ -40,6 +40,7 @@
     "shelljs": "^0.7.3"
   },
   "dependencies": {
-    "opener": "^1.4.1"
+    "opener": "^1.4.1",
+    "path-exists": "^3.0.0"
   }
 }

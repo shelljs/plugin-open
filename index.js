@@ -3,14 +3,14 @@ var plugin = require('shelljs/plugin');
 
 // Require whatever modules you need for your project
 var opener = require('opener');
-var fs = require('fs');
+var pathExists = require('path-exists');
 
 // Implement your command in a function, which accepts `options` as the
 // first parameter, and other arguments after that
 function open(options, fileName) {
   var URL_REGEX = /^https?:\/\/.*/;
 
-  if (!fs.existsSync(fileName) && !fileName.match(URL_REGEX)) {
+  if (!pathExists.sync(fileName) && !fileName.match(URL_REGEX)) {
     plugin.error('Unable to locate file: ' + fileName);
   }
 
