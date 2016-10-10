@@ -61,7 +61,7 @@ shell.open('file.txt'); // the plugin is now available!
  - OS X
  - Windows
 
-This is only supported for Node v4+
+This is supported for Node v0.11+
 
 ## Writing plugins
 

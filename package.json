@@ -6,7 +6,7 @@
   "scripts": {
     "posttest": "npm run lint",
     "test": "mocha",
-    "lint": "eslint .",
+    "lint": "node scripts/eslint-wrapper.js",
     "changelog": "shelljs-changelog",
     "release:major": "shelljs-release major",
     "release:minor": "shelljs-release minor",
@@ -40,7 +40,6 @@
     "shelljs": "^0.7.3"
   },
   "dependencies": {
-    "opener": "^1.4.1",
-    "path-exists": "^3.0.0"
+    "opener": "^1.4.1"
   }
 }
