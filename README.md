@@ -8,10 +8,10 @@ A [ShellJS](https://github.com/shelljs/shelljs) plugin for the `open()` command
 to open a file (or URL) with its default application. This is largely based on
 [opener](https://github.com/domenic/opener).
 
-This is designed to imitate the `open` command on Mac OS X. Here's the
+This is designed to imitate the `open` command on macOS. Here's the
 equivalent commands for other systems:
 
- - Mac OS X
+ - macOS
 
    ```bash
    $ open file.txt # opens in a text editor
@@ -57,7 +57,7 @@ shell.open('file.txt'); // the plugin is now available!
 ## Supported systems
 
  - Linux (all variants)
- - OS X
+ - macOS
  - Windows
 
 This is supported for Node v0.11+
