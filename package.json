@@ -6,7 +6,7 @@
   "scripts": {
     "posttest": "npm run lint",
     "test": "mocha",
-    "lint": "node scripts/eslint-wrapper.js",
+    "lint": "eslint .",
     "changelog": "shelljs-changelog",
     "release:major": "shelljs-release major",
     "release:minor": "shelljs-release minor",
@@ -43,6 +43,6 @@
     "opener": "^1.4.1"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   }
 }

@@ -4,6 +4,7 @@ var plugin = require('shelljs/plugin');
 // Require whatever modules you need for your project
 var opener = require('opener');
 var fs = require('fs');
+
 var pathExistsSync = function (filePath) {
   try {
     fs.accessSync(filePath);
@@ -32,7 +33,7 @@ function open(options, fileName) {
 
 // Register the new plugin as a ShellJS command
 plugin.register('open', open, {
-  cmdOptions: {},   // There are no supported options for this command
+  cmdOptions: {}, // There are no supported options for this command
 });
 
 // Optionally, you can export the implementation of the command like so:
