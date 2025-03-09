@@ -27,7 +27,7 @@ var pluginOpen = require('..');
  * want to use ShellJS like this normally):
  */
 var shell = require('shelljs'); // recommended
-require('shelljs/global');      // not recommended
+require('shelljs/global'); //      not recommended
 
 /*
  * Now, require whichever other modules you want to require:

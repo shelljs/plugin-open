@@ -16,6 +16,8 @@
     "prefer-template": 0,
     "func-names": 0,
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "import/order": 0,
+    "no-restricted-globals": 0,
     "new-cap": [2, {
       "capIsNewExceptions": [
         "ShellString"
