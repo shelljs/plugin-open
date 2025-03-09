@@ -124,7 +124,7 @@ describe('plugin-open', function () {
      * Plugins can easily take advantage of ShellJS's built-in glob expansion.
      * This is indicated by the globStart option
      */
-    var ret = shell.open('te?t/*st.js');
+    var ret = shell.open('te*/t?st.js');
     ret.code.should.equal(0);
     ret.stdout.should.equal('');
     assert.ok(!ret.stderr);
