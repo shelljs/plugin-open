@@ -31,13 +31,13 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
     "mocha": "^5.2.0",
-    "shelljs": "^0.9.1",
+    "shelljs": "^0.10.0",
     "shelljs-changelog": "^0.2.6",
     "shelljs-release": "^0.5.1",
     "should": "^13.2.3"
   },
   "peerDependencies": {
-    "shelljs": "^0.9.1"
+    "shelljs": "^0.10.0"
   },
   "dependencies": {
     "opener": "^1.4.1"
